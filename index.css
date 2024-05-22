@@ -27,3 +27,12 @@ header nav a {
   color: black;
   text-decoration: none;
 }
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.cta img {
+  height: 20px;
+  width: auto;
+}
