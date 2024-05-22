@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 30px 100px 30px 54px;
+}
+
+header .logo {
+  width: 120px;
+  cursor: pointer;
+}
