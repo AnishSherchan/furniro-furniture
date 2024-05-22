@@ -36,3 +36,51 @@ header nav a {
   height: 20px;
   width: auto;
 }
+.hero {
+  background-image: url("/public/assets/HeroImage.png");
+  background-position: center;
+  position: relative;
+  height: 516px;
+  width: 100%;
+}
+.hero-section {
+  position: absolute;
+  right: 58px;
+  bottom: 40px;
+  padding: 62px 43px 37px 39px;
+  width: 643px;
+  background-color: #fff3e3;
+  border-radius: 10px;
+}
+
+.hero-section p:first-child {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.hero-section h1 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 65px;
+  text-align: left;
+  color: #b88e2f;
+}
+.hero-section p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+.hero-section button {
+  padding: 25px 75px;
+  margin-top: 46px;
+  text-transform: capitalize;
+  background-color: #b88e2f;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
