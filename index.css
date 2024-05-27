@@ -213,3 +213,15 @@ header nav a {
   color: #b0b0b0;
   margin-left: 16px;
 }
+.product .product__button {
+  display: block;
+  margin: 32px auto 0px auto;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: #b88e2f;
+  border: solid 2px #b88e2f;
+  cursor: pointer;
+  padding: 12px 74px;
+}
