@@ -225,3 +225,44 @@ header nav a {
   cursor: pointer;
   padding: 12px 74px;
 }
+.portfolio {
+  padding: 44px 30px 44px 100px;
+  margin-top: 35px;
+  display: flex;
+  gap: 42px;
+  justify-content: space-between;
+  background-color: #fcf8f3;
+}
+.portfolio .portfolio__slides {
+  display: flex;
+  gap: 26px;
+  /* flex-direction: column; */
+}
+.portfolio .portfolio__heading {
+  margin: auto;
+}
+.portfolio .portfolio__heading h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: left;
+  margin-bottom: 7px;
+}
+.portfolio .portfolio__heading p {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.portfolio .portfolio__heading button {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  background-color: #b88e2f;
+  padding: 12px 36px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
