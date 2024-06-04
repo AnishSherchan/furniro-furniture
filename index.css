@@ -11,6 +11,9 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+.btn {
+  cursor: pointer;
+}
 .container {
   padding: 40px 130px 0px 130px;
 }
@@ -236,7 +239,20 @@ header nav a {
 .portfolio .portfolio__slides {
   display: flex;
   gap: 26px;
-  /* flex-direction: column; */
+}
+.portfolio__slides .portfolio__slides-image {
+  position: relative;
+}
+.portfolio__slides .portfolio__slides-image .image-info {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  display: flex;
+  align-items: flex-end;
+}
+.portfolio__slides .portfolio__slides-image .image-info .info-text {
+  background-color: white;
+  padding: 32px 34px;
 }
 .portfolio .portfolio__heading {
   margin: auto;
@@ -265,4 +281,26 @@ header nav a {
   color: white;
   border: none;
   cursor: pointer;
+}
+.image-info .info-text .info-span {
+  display: flex;
+  gap: 8px;
+}
+.image-info .info-text .info-span span {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #616161;
+  text-align: left;
+}
+.image-info .info-text .info-span h3 {
+  color: #3a3a3a;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33.6px;
+  text-align: left;
+}
+.image-info .button {
+  padding: 12px;
+  background-color: #b88e2f;
 }
