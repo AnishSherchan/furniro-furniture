@@ -131,6 +131,9 @@ header nav a {
 .product__images .product__images-item .product-image-container {
   position: relative;
 }
+.product__images-item {
+  cursor: pointer;
+}
 .label {
   position: absolute;
   top: 24px;

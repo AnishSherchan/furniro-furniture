@@ -42,6 +42,10 @@ const fetchProductDataLanding = async () => {
   product?.map((product) => {
     // Creating parent Div for item
     const productItem = document.createElement("div");
+    productItem.addEventListener("click", () => {
+      // Add Routing here for specific Product
+      console.log(`Clicked and id is ${product.id}`);
+    });
     productItem.classList.add("product__images-item");
     // Creating image container
     const imageContainer = document.createElement("div");
