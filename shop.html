@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="shop-page">
+    <header>
+      <!-- Add Logo for the website -->
+      <img src="public/assets/Logo/Frame 168.png" alt="Logo" class="logo" />
+      <!-- Add Nav Links for the website -->
+      <nav>
+        <a href="/">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <!-- Add CTAs -->
+      <div class="cta">
+        <img
+          src="/public/assets/icons/mdi_account-alert-outline.png"
+          alt="Account Alert"
+        />
+        <img
+          src="public/assets/icons/akar-icons_search.png"
+          alt="Search Icon"
+        />
+        <img src="public/assets/icons/akar-icons_heart.png" alt="Fav" />
+        <img
+          src="public/assets/icons/ant-design_shopping-cart-outlined.png"
+          alt="Cart"
+        />
+      </div>
+    </header>
+
+    <section class="container product">
+      <div class="product__images" id="product_landing">
+        <!-- Fetching data Here -->
+        <!-- Fallback State -->
+        <p class="fallback">Loading Data...</p>
+      </div>
+      <div>
+        <button class="product__button">View All</button>
+      </div>
+    </section>
+
+    <footer style="margin-top: 10px">
+      <div class="footer-content">
+        <div class="furniro-info-footer">
+          <h3>Funiro.</h3>
+          <span
+            >400 University Drive Suite 200 Coral Gables, <br />FL 33134
+            USA</span
+          >
+        </div>
+        <div class="furniro-links-footer">
+          <span>Links</span>
+          <p>Home</p>
+          <p>Shop</p>
+          <p>About</p>
+          <p>Contact</p>
+        </div>
+        <div class="furniro-help-footer">
+          <span>Help</span>
+          <p>Payment Options</p>
+          <p>Returns</p>
+          <p>Privacy Policies</p>
+        </div>
+        <div class="furniro-newsletter-footer">
+          <span>Newsletter</span>
+          <div class="fields">
+            <input
+              type="text"
+              name="news-letter"
+              id="news-letter-input"
+              placeholder="Enter Your Email Address"
+            />
+            <button class="sub btn">SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="copyright">
+        <p>2023 furino. All rights reverved</p>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
