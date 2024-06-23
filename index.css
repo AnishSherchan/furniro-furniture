@@ -5,11 +5,18 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+img {
+  object-fit: contain;
+}
 header {
   padding: 30px 100px 30px 54px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.fallback {
+  font-size: 26px;
+  font-weight: 400;
 }
 .btn {
   cursor: pointer;
@@ -117,7 +124,8 @@ header nav a {
   margin-top: 40px;
   display: flex;
   gap: 32px;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 .product__images .product__images-item .product-image-container {
@@ -201,6 +209,7 @@ header nav a {
   font-weight: 500;
   margin: 8px 0px;
   line-height: 24px;
+  text-transform: capitalize;
   color: #898989;
 }
 .product__images-item .product__images-desc .price .discounted-price {
