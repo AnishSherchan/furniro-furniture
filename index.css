@@ -509,6 +509,39 @@ footer {
   background-color: #b88e2f;
   color: white;
 }
+.delivery-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 53px;
+  margin: 85px 0px;
+  background-color: #faf3ea;
+}
+.delivery-cta .delivery-cta-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 55px;
+}
+.delivery-cta .delivery-cta-items .delivery-cta-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delivery-cta .delivery-cta-items .delivery-cta-item h3 {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 37.5px;
+  font-family: Poppins;
+}
+
+.delivery-cta .delivery-cta-items .delivery-cta-item span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #898989;
+}
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
