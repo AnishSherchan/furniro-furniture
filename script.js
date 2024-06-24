@@ -1,5 +1,4 @@
 const API_URL = "https://fakestoreapi.com/";
-
 const userControl = [
   {
     src: "public/assets/UserInteraction/gridicons_share.png",

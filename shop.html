@@ -35,14 +35,79 @@
       </div>
     </header>
 
+    <main class="hero-shop">
+      <div class="hero-shop-content">
+        <h1>Shop</h1>
+        <p><span>Home ></span> Shop</p>
+      </div>
+    </main>
+
+    <section class="filter">
+      <div class="filter-element">
+        <div class="filter-action">
+          <p>
+            <img
+              src="/public/assets/Shop/system-uicons_filtering.svg"
+              alt="filter"
+              height="25px"
+              width="25px"
+            />
+            Filter
+          </p>
+          <p>
+            <img
+              src="/public/assets/Shop/ci_grid-big-round.svg"
+              alt="Display content round"
+              height="25px"
+              width="25px"
+            />
+          </p>
+          <p>
+            <img
+              src="/public/assets/Shop/bi_view-list.svg"
+              height="25px"
+              alt="Display content List"
+              width="25px"
+            />
+          </p>
+        </div>
+        <div class="vertical-border"></div>
+        <div class="no-content">
+          <p>Showing 1–16 of 32 results</p>
+        </div>
+      </div>
+      <div class="filter-sort">
+        <div class="display-content">
+          <p>Show</p>
+          <input
+            type="number"
+            name="number-product"
+            id="number-product-display"
+            placeholder="16"
+          />
+        </div>
+        <div class="sort-content">
+          <p>Sort by</p>
+          <select name="sort-product" id="sort-product">
+            <option value="" disabled selected hidden>Default</option>
+            <option value="Ascending">Ascending</option>
+            <option value="Descending">Descending</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
     <section class="container product">
       <div class="product__images" id="product_landing">
         <!-- Fetching data Here -->
         <!-- Fallback State -->
         <p class="fallback">Loading Data...</p>
       </div>
-      <div>
-        <button class="product__button">View All</button>
+      <div class="pagination">
+        <button class="pagination__button pagination_selected">1</button>
+        <button class="pagination__button">2</button>
+        <button class="pagination__button">3</button>
+        <button class="pagination__button">Next</button>
       </div>
     </section>
 

@@ -8,6 +8,11 @@
 img {
   object-fit: contain;
 }
+.vertical-border {
+  width: 1px;
+  background-color: #9f9f9f; /* Change this to your desired border color */
+  height: 35px; /* or 100% to match the height of the container */
+}
 header {
   padding: 30px 100px 30px 54px;
   display: flex;
@@ -395,4 +400,121 @@ footer {
   font-weight: 400;
   line-height: 24px;
   text-align: left;
+}
+.hero-shop {
+  position: relative;
+  height: 316px;
+  padding: 120px 0px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden; /* Ensure child elements are not overflowing */
+}
+
+.hero-shop::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/assets/Shop/hero-shop.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.hero-shop-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.hero-shop-content h1 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 72px;
+}
+.hero-shop-content p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+.hero-shop-content span {
+  font-weight: 500;
+}
+.filter {
+  padding: 31px 98px;
+  background-color: #f9f1e7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter .filter-element,
+.filter .filter-sort {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+}
+.filter .filter-element p,
+.filter .filter-sort p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.filter .filter-element .filter-action {
+  display: flex;
+  gap: 23px;
+}
+.filter .filter-sort .display-content,
+.filter .filter-sort .sort-content {
+  display: flex;
+  gap: 17px;
+}
+.filter .filter-sort .display-content input {
+  padding: 13px 17px;
+  font-size: 20px;
+  width: 55px;
+  border: none;
+  font-weight: 400;
+  line-height: 30px;
+}
+.filter .filter-sort .sort-content select {
+  padding: 12px 30px;
+  font-size: 20px;
+  border: none;
+  font-weight: 400;
+  border: none;
+  line-height: 30px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 70px;
+}
+.pagination__button {
+  padding: 15px 26px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  border-radius: 10px;
+  background-color: #f9f1e7;
+  border: none;
+  cursor: pointer;
+}
+.pagination_selected {
+  background-color: #b88e2f;
+  color: white;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Hides spin buttons in Firefox */
 }
