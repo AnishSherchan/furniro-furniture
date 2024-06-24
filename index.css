@@ -22,6 +22,7 @@ header {
 .fallback {
   font-size: 26px;
   font-weight: 400;
+  text-align: center;
 }
 .btn {
   cursor: pointer;
@@ -566,12 +567,85 @@ footer {
   font-weight: 400;
   line-height: 24px;
 }
+
+.product-page .product-info-desc {
+  padding: 48px 207px;
+  border-top: 1px solid #d9d9d9;
+}
+.product-page .product-info-desc h3 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 37px;
+}
+.product-page .product-info-desc p {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: justified;
+  color: #9f9f9f;
+}
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
+/* 206 45 */
+.product-page .product-info-page {
+  padding: 45px 206px;
+  display: flex;
+  gap: 105px;
+}
+.product-page .product-info-page img {
+  object-fit: cover;
+}
+.product-page .product-info-page .product-info-single {
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+}
+.product-page .product-info-page h2 {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 63px;
+}
+.product-page .product-info-page span {
+  color: #9f9f9f;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19.5px;
+}
+.product-page .product-info-page .price {
+  color: #9f9f9f;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+}
+.product-page .product-info-page .product-info-single .rateing {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.product-page .product-info-page .product-info-single .description {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19.5px;
+}
+.product-page .product-info-page .product-info-single .title,
+.product-page .product-info-page .product-info-single .details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.product-page .product-info-page .product-info-single .title p,
+.product-page .product-info-page .product-info-single .details p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #9f9f9f;
+}
 input[type="number"] {
   -moz-appearance: textfield; /* Hides spin buttons in Firefox */
 }

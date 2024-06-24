@@ -106,8 +106,7 @@ const createProduct = (product) => {
 };
 
 // Landing Page data fetching
-const fetchProductDataLanding = async () => {
-  const MAX_DATA = 12;
+const fetchProductDataLimit = async (MAX_DATA) => {
   const product = await fetchData(`products?limit=${MAX_DATA}`);
   createProduct(product);
 };
@@ -116,19 +115,140 @@ const fetchAllProduct = async () => {
   const product = await fetchData(`products`);
   createProduct(product);
 };
+
+const getSingleProduct = async () => {
+  // Getting Search parameter from url
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = parseInt(urlParams.get("id"));
+  const productData = await fetchData(`products/${productId}`);
+  const mainContainer = document.getElementById("single-product-detail");
+  mainContainer.innerHTML = "";
+
+  function getStarRatingHTML(rating) {
+    // Round the rating to the nearest half
+    const roundedRating = Math.round(rating * 2) / 2;
+    // Calculate the number of full stars
+    const fullStars = Math.floor(roundedRating);
+    // Determine if there is a half star
+    const hasHalfStar = roundedRating % 1 !== 0 ? 1 : 0;
+    // Initialize an empty string for the stars
+    let starsHTML = "";
+    // Add full stars
+    for (let i = 0; i < fullStars; i++) {
+      starsHTML +=
+        '<img src="public/assets/Product/dashicons_star-filled.svg" alt="star" />';
+    }
+    // Add half star if needed
+    if (hasHalfStar) {
+      starsHTML +=
+        '<img src="public/assets/Product/carbon_star-half.svg" alt="half star" />';
+    }
+    // Add empty to make a total of 5
+    for (let i = fullStars + hasHalfStar; i < 5; i++) {
+      starsHTML += "";
+    }
+    return starsHTML;
+  }
+  mainContainer.innerHTML = `<div class="product-info-page">
+    <img
+        src=${productData.image}
+        alt="Grifo"
+        width="423"
+        height="500"
+    />
+    <div class="product-info-single">
+        <div>
+            <h2>${productData.title}</h2>
+            <p class="price">Rs. ${productData.price}</p>
+        </div>
+        <div class="rateing">
+            <div class="stars">
+                ${getStarRatingHTML(productData.rating.rate)}
+            </div>
+            <div class="vertical-border"></div>
+            <span>${productData.rating.count} Customer Review</span>
+        </div>
+        <p class="description">
+            ${productData.description}
+        </p>
+        <input
+            type="number"
+            name="order-product"
+            id="order-product"
+            placeholder="1"
+            style="
+                padding: 20px;
+                width: 63px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                text-align: center;
+                border-radius: 10px;
+                border: 1px solid #9f9f9f;
+            "
+        />
+        <hr style="margin: 60px 0px 30px 0px" />
+        <div style="display: flex; gap: 16px">
+            <div class="title">
+                <p>SKU</p>
+                <p>Category</p>
+                <p>Tags</p>
+                <p>Share</p>
+            </div>
+            <div class="details">
+                <p>: ${productData.id}</p>
+                <p>: ${productData.category}</p>
+                <p>: ${productData.category}</p>
+                <p style="display: flex; align-items: center; gap: 12px">
+                    :
+                    <img
+                        src="public/assets/Product/akar-icons_facebook-fill.svg"
+                        alt="facebook"
+                        width="20px"
+                        height="20px"
+                    />
+                    <img
+                        src="public/assets/Product/akar-icons_linkedin-box-fill.svg"
+                        alt="Linkedin"
+                        width="20px"
+                        height="20px"
+                    />
+                    <img
+                        src="public/assets/Product/ant-design_twitter-circle-filled.svg"
+                        alt="Twitter"
+                        width="20px"
+                        height="20px"
+                    />
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-info-desc">
+    <h3>Description</h3>
+    <!-- Fetch data here and create fallback state -->
+    <p id="product-description">
+       ${productData.description}
+    </p>
+</div>`;
+
+  const titleHistory = document.getElementById("product-name-history");
+  titleHistory.textContent = productData.title;
+};
+
+const handleViewAll = () => {
+  location.href = "shop.html";
+};
+
 // Running function based on page for optimization
 function initializePageScripts() {
   if (document.body.id === "index-page") {
-    fetchProductDataLanding();
+    fetchProductDataLimit(12);
   } else if (document.body.id === "shop-page") {
     fetchAllProduct();
   } else if (document.body.id === "product-page") {
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = parseInt(urlParams.get("id"));
-    console.log(productId);
-    urlParams.forEach((value) => {
-      console.log(value);
-    });
+    getSingleProduct();
+    fetchProductDataLimit(4);
   }
 }
 
