@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body id="shop-page">
+  <body id="contact-page">
     <header>
       <!-- Add Logo for the website -->
       <img src="public/assets/Logo/Frame 168.png" alt="Logo" class="logo" />
@@ -34,10 +34,15 @@
         />
       </div>
     </header>
-
     <main class="hero-shop">
       <div class="hero-shop-content">
-        <h1>Shop</h1>
+        <img
+          src="public/assets/Logo/Meubel House_Logos-05.svg"
+          alt="Logo"
+          width="50"
+          height="32"
+        />
+        <h1>Contact</h1>
         <p>
           <span
             ><a href="/index.html" style="text-decoration: none; color: black"
@@ -45,77 +50,100 @@
             >
             ></span
           >
-          Shop
+          Contact
         </p>
       </div>
     </main>
 
-    <section class="filter">
-      <div class="filter-element">
-        <div class="filter-action">
-          <p>
+    <section class="contact">
+      <h2>Get In Touch With Us</h2>
+      <p>
+        For More Information About Our Product & Services. Please Feel Free To
+        Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not
+        Hesitate!
+      </p>
+      <div class="form-container">
+        <div class="shop-detail">
+          <div class="address">
             <img
-              src="/public/assets/Shop/system-uicons_filtering.svg"
-              alt="filter"
-              height="25px"
-              width="25px"
+              src="/public/assets/icons/Vector.svg"
+              width="20px"
+              height="20px"
+              alt="Location"
             />
-            Filter
-          </p>
-          <p>
-            <img
-              src="/public/assets/Shop/ci_grid-big-round.svg"
-              alt="Display content round"
-              height="25px"
-              width="25px"
-            />
-          </p>
-          <p>
-            <img
-              src="/public/assets/Shop/bi_view-list.svg"
-              height="25px"
-              alt="Display content List"
-              width="25px"
-            />
-          </p>
-        </div>
-        <div class="vertical-border"></div>
-        <div class="no-content">
-          <p>Showing 1–16 of 32 results</p>
-        </div>
-      </div>
-      <div class="filter-sort">
-        <div class="display-content">
-          <p>Show</p>
-          <input
-            type="number"
-            name="number-product"
-            id="number-product-display"
-            placeholder="16"
-          />
-        </div>
-        <div class="sort-content">
-          <p>Sort by</p>
-          <select name="sort-product" id="sort-product">
-            <option value="" disabled selected hidden>Default</option>
-            <option value="Ascending">Ascending</option>
-            <option value="Descending">Descending</option>
-          </select>
-        </div>
-      </div>
-    </section>
+            <div>
+              <h3>Address</h3>
+              <p style="text-align: justify">
+                236 5th SE Avenue, New York NY10000, United States
+              </p>
+            </div>
+          </div>
 
-    <section class="container product">
-      <div class="product__images" id="product_landing">
-        <!-- Fetching data Here -->
-        <!-- Fallback State -->
-        <p class="fallback">Loading Data...</p>
-      </div>
-      <div class="pagination">
-        <button class="pagination__button pagination_selected">1</button>
-        <button class="pagination__button">2</button>
-        <button class="pagination__button">3</button>
-        <button class="pagination__button">Next</button>
+          <div class="address">
+            <img
+              src="/public/assets/icons/bxs_phone.svg"
+              width="20px"
+              height="20px"
+              alt="phone"
+            />
+            <div>
+              <h3>Phone</h3>
+              <p style="text-align: justify">Mobile: +(84) 546-6789</p>
+              <p style="text-align: justify">Mobile: +(84) 546-6789</p>
+            </div>
+          </div>
+
+          <div class="address">
+            <img
+              src="/public/assets/icons/bi_clock-fill.svg"
+              width="20px"
+              height="20px"
+              alt="phone"
+            />
+            <div>
+              <h3>Working Time</h3>
+              <p style="text-align: justify">Monday-Friday: 9:00 - 22:00</p>
+              <p style="text-align: justify">Saturday-Sunday: 9:00 - 21:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="form">
+          <form onsubmit="formSubmit()">
+            <div class="lable-input">
+              <label for="name">Your name</label>
+              <input type="text" name="name" id="name" placeholder="ABC" />
+            </div>
+            <div class="lable-input">
+              <label for="name">Email address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Abc@def.com"
+              />
+            </div>
+            <div class="lable-input">
+              <label for="name">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                id="email"
+                placeholder="This is optional"
+              />
+            </div>
+            <div class="lable-input">
+              <label for="name">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Hi! i’d like to ask about"
+              ></textarea>
+            </div>
+            <div>
+              <button>Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -175,7 +203,7 @@
       </div>
     </section>
 
-    <footer style="margin-top: 10px">
+    <footer>
       <div class="footer-content">
         <div class="furniro-info-footer">
           <h3>Funiro.</h3>
@@ -216,5 +244,5 @@
       </div>
     </footer>
   </body>
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </html>

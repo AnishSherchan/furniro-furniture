@@ -239,7 +239,9 @@ const getSingleProduct = async () => {
 const handleViewAll = () => {
   location.href = "shop.html";
 };
-
+const formSubmit = () => {
+  alert("Form Submitted ");
+};
 // Running function based on page for optimization
 function initializePageScripts() {
   if (document.body.id === "index-page") {
