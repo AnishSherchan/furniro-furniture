@@ -407,6 +407,7 @@ footer {
   height: 316px;
   padding: 120px 0px;
   display: flex;
+  align-items: center;
   justify-content: center;
   overflow: hidden; /* Ensure child elements are not overflowing */
 }
@@ -432,6 +433,7 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 .hero-shop-content h1 {
   font-size: 48px;
@@ -645,6 +647,75 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 400;
   line-height: 24px;
   color: #9f9f9f;
+}
+.contact {
+  padding: 98px 191px;
+}
+.contact h2 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 54px;
+}
+.contact p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #9f9f9f;
+}
+.contact .form-container {
+  margin-top: 133px;
+}
+.form-container {
+  display: flex;
+  gap: 158px;
+}
+.shop-detail {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 42px;
+}
+.shop-detail .address {
+  display: flex;
+  gap: 30px;
+}
+.form {
+  flex: 2;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.lable-input {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.lable-input input,
+.lable-input textarea {
+  width: 530px;
+  padding: 25px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  border: 1px solid #9f9f9f;
+}
+form button {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  background-color: #b88e2f;
+  padding: 13px 89px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 input[type="number"] {
   -moz-appearance: textfield; /* Hides spin buttons in Firefox */
