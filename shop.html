@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="shop-page">
+    <header>
+      <!-- Add Logo for the website -->
+      <img src="public/assets/Logo/Frame 168.png" alt="Logo" class="logo" />
+      <!-- Add Nav Links for the website -->
+      <nav>
+        <a href="/">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <!-- Add CTAs -->
+      <div class="cta">
+        <img
+          src="/public/assets/icons/mdi_account-alert-outline.png"
+          alt="Account Alert"
+        />
+        <img
+          src="public/assets/icons/akar-icons_search.png"
+          alt="Search Icon"
+        />
+        <img src="public/assets/icons/akar-icons_heart.png" alt="Fav" />
+        <img
+          src="public/assets/icons/ant-design_shopping-cart-outlined.png"
+          alt="Cart"
+        />
+      </div>
+    </header>
+
+    <main class="hero-shop">
+      <div class="hero-shop-content">
+        <h1>Shop</h1>
+        <p><span>Home ></span> Shop</p>
+      </div>
+    </main>
+
+    <section class="filter">
+      <div class="filter-element">
+        <div class="filter-action">
+          <p>
+            <img
+              src="/public/assets/Shop/system-uicons_filtering.svg"
+              alt="filter"
+              height="25px"
+              width="25px"
+            />
+            Filter
+          </p>
+          <p>
+            <img
+              src="/public/assets/Shop/ci_grid-big-round.svg"
+              alt="Display content round"
+              height="25px"
+              width="25px"
+            />
+          </p>
+          <p>
+            <img
+              src="/public/assets/Shop/bi_view-list.svg"
+              height="25px"
+              alt="Display content List"
+              width="25px"
+            />
+          </p>
+        </div>
+        <div class="vertical-border"></div>
+        <div class="no-content">
+          <p>Showing 1–16 of 32 results</p>
+        </div>
+      </div>
+      <div class="filter-sort">
+        <div class="display-content">
+          <p>Show</p>
+          <input
+            type="number"
+            name="number-product"
+            id="number-product-display"
+            placeholder="16"
+          />
+        </div>
+        <div class="sort-content">
+          <p>Sort by</p>
+          <select name="sort-product" id="sort-product">
+            <option value="" disabled selected hidden>Default</option>
+            <option value="Ascending">Ascending</option>
+            <option value="Descending">Descending</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="container product">
+      <div class="product__images" id="product_landing">
+        <!-- Fetching data Here -->
+        <!-- Fallback State -->
+        <p class="fallback">Loading Data...</p>
+      </div>
+      <div class="pagination">
+        <button class="pagination__button pagination_selected">1</button>
+        <button class="pagination__button">2</button>
+        <button class="pagination__button">3</button>
+        <button class="pagination__button">Next</button>
+      </div>
+    </section>
+
+    <section class="delivery-cta">
+      <div class="delivery-cta-items">
+        <div class="delivery-cta-item">
+          <img
+            src="public/assets/Shop/trophy 1.svg"
+            alt="Trophy"
+            width="60px"
+            height="60px"
+          />
+          <div>
+            <h3>High Quality</h3>
+            <span>crafted from top materials</span>
+          </div>
+        </div>
+
+        <div class="delivery-cta-item">
+          <img
+            src="public/assets/Shop/guarantee.svg"
+            alt="Guarantee"
+            width="60px"
+            height="60px"
+          />
+          <div>
+            <h3>Warranty Protection</h3>
+            <span>Over 2 years</span>
+          </div>
+        </div>
+
+        <div class="delivery-cta-item">
+          <img
+            src="public/assets/Shop/shipping.svg"
+            alt="Shipping"
+            width="60px"
+            height="60px"
+          />
+          <div>
+            <h3>Free Shipping</h3>
+            <span>Order upto 150 $</span>
+          </div>
+        </div>
+
+        <div class="delivery-cta-item">
+          <img
+            src="public/assets/Shop/customer-support.svg"
+            alt="Support"
+            width="60px"
+            height="60px"
+          />
+          <div>
+            <h3>24 / 7 Support</h3>
+            <span>Dedicated Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer style="margin-top: 10px">
+      <div class="footer-content">
+        <div class="furniro-info-footer">
+          <h3>Funiro.</h3>
+          <span
+            >400 University Drive Suite 200 Coral Gables, <br />FL 33134
+            USA</span
+          >
+        </div>
+        <div class="furniro-links-footer">
+          <span>Links</span>
+          <p>Home</p>
+          <p>Shop</p>
+          <p>About</p>
+          <p>Contact</p>
+        </div>
+        <div class="furniro-help-footer">
+          <span>Help</span>
+          <p>Payment Options</p>
+          <p>Returns</p>
+          <p>Privacy Policies</p>
+        </div>
+        <div class="furniro-newsletter-footer">
+          <span>Newsletter</span>
+          <div class="fields">
+            <input
+              type="text"
+              name="news-letter"
+              id="news-letter-input"
+              placeholder="Enter Your Email Address"
+            />
+            <button class="sub btn">SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="copyright">
+        <p>2023 furino. All rights reverved</p>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

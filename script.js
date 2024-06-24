@@ -1,5 +1,4 @@
 const API_URL = "https://fakestoreapi.com/";
-
 const userControl = [
   {
     src: "public/assets/UserInteraction/gridicons_share.png",
@@ -32,10 +31,7 @@ const fetchData = async (url) => {
   }
 };
 
-// Landing Page data fetching
-const fetchProductDataLanding = async () => {
-  const MAX_DATA = 12;
-  const product = await fetchData(`products?limit=${MAX_DATA}`);
+const createProduct = (product) => {
   const productSection = document.getElementById("product_landing");
   productSection.innerHTML = "";
   // Mapping through each products
@@ -45,7 +41,9 @@ const fetchProductDataLanding = async () => {
     productItem.addEventListener("click", () => {
       // Add Routing here for specific Product
       console.log(`Clicked and id is ${product.id}`);
+      location.href = `product.html?id=${product.id}`;
     });
+
     productItem.classList.add("product__images-item");
     // Creating image container
     const imageContainer = document.createElement("div");
@@ -107,11 +105,30 @@ const fetchProductDataLanding = async () => {
   });
 };
 
+// Landing Page data fetching
+const fetchProductDataLanding = async () => {
+  const MAX_DATA = 12;
+  const product = await fetchData(`products?limit=${MAX_DATA}`);
+  createProduct(product);
+};
+
+const fetchAllProduct = async () => {
+  const product = await fetchData(`products`);
+  createProduct(product);
+};
 // Running function based on page for optimization
 function initializePageScripts() {
   if (document.body.id === "index-page") {
     fetchProductDataLanding();
-  } else if (document.body.id === "index-page") {
+  } else if (document.body.id === "shop-page") {
+    fetchAllProduct();
+  } else if (document.body.id === "product-page") {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = parseInt(urlParams.get("id"));
+    console.log(productId);
+    urlParams.forEach((value) => {
+      console.log(value);
+    });
   }
 }
 
